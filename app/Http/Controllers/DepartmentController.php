@@ -33,7 +33,7 @@ class DepartmentController extends Controller
 
         public function index()
         {
-          echo Auth::user()->id;exit;
+          // echo Auth::user()->id;exit;
             
            $result = \DB::table('departments')
         ->leftJoin('categories', 'categories.id' , '=',  'departments.pre_id')

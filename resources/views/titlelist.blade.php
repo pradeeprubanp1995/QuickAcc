@@ -64,8 +64,8 @@
       <td>
         <a href="{{ url('/admin/user/change/'.$data->id) }}"  class="btn btn-warning editt"><i class="fa fa-edit"></i>{{ ($data->status)? 'Inactive' : 'Active' }}</a>
         <td>
-          <form action="{{ url('/admin/acc_delete/'.$data->id) }}" method="get">
-            <button class="btn  btn-danger" type="submit" name="remove_levels" value="delete" data-toggle="modal" data-target="#deleteModal" data-deptname="{{$data->primeum}}"><i class="fa fa-trash-o"></i>Delete</span>
+          <form action="{{ url('/admin/user_delete/'.$data->id) }}" method="get">
+            <button class="btn  btn-danger" type="submit" name="remove_levels" value="delete" data-toggle="modal" data-target="#deleteModal" data-deptname="{{$data->name}}"><i class="fa fa-trash-o"></i>Delete</span>
             </button>
           </form>
         </td>

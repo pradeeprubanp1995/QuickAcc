@@ -53,12 +53,12 @@
 				<td>{{ ucfirst($data->days) }}</td>
                 
 				  <td><a href="{{ url('/admin/edit_cat/'.$data['id']) }}" type="button" class="btn btn-warning edit"><i class="fa fa-edit"></i>Edit</a></td>
-				  <td>
+				  <!-- <td>
 					<form action="{{ url('/admin/delete_cat/'.$data['id']) }}" method="get">
 						<button class="btn  btn-danger" type="submit" name="remove_levels" value="delete" data-toggle="modal" data-target="#deleteModal" data-deptname="{{$data->cat_name}}"><i class="fa fa-trash-o"></i>Delete</span>
 						</button>
 					</form>
-				</td>
+				</td> -->
 				  </tr>
 			@endforeach
 		</tbody>

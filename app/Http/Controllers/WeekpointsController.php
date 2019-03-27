@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Upcoming_title;
 use App\Department;
 use App\Category;
+use App\User;
 use App\Title;
 use DB;
 use Hash;
@@ -46,12 +47,13 @@ class WeekpointsController extends Controller
 
      public function paymentpage()
     {
-            $premium = Category::select('*')->get();
-            $username = Auth::user()->id;
+            $userid = Auth::user()->id;
+            $premiumid = User::select('premium_id')->where('id',$userid)->first();
+            $premium = Category::where('id' ,$premiumid->premium_id)->first();
             $user=array();
-            $user['id']=Hash::make($username); 
+            $user['id']=$userid;
             $user['uname'] = Auth::user()->email;
-        // echo "<pre>";print_r($user);exit;
+        // echo "<pre>";print_r($premium);exit;
         return view('paymentpage' , ['premium' => $premium ,'user' => $user]);
     }
     public function getamount()
@@ -93,7 +95,7 @@ class WeekpointsController extends Controller
 
 
       
-      $statuschange =  \DB::table('users')->where('id',$userid)->update(array('status' =>'1','premium_id' => $preid ,'count' => $count, 'expiredate' => $exdate , 'current_cnt' => $count ));
+      $statuschange =  \DB::table('users')->where('id',$userid)->update(array('status' =>'1','count' => $count, 'expiredate' => $exdate , 'current_cnt' => $count ));
         // echo "<pre>";print_r($data->status);exit;
         return view('paypalsuccess');
     }

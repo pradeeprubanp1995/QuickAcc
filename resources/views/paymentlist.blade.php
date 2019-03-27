@@ -47,7 +47,7 @@
 				
 				<tr>
 				<td>{{ $key+1 }}</td>
-				<td>{{ ucfirst($data->username) }}</td>
+				<td>{{ ucfirst($data->name) }}</td>
 				<td>{{ ucfirst($data->primeum) }}</td>
 				<td>{{ ucfirst($data->amount) }}</td>
 				<td>{{ ucfirst($data->created_at) }}</td>

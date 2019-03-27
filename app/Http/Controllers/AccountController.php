@@ -134,16 +134,18 @@ class AccountController extends Controller
 
             // print_r($id);exit;
             //
-            $dept = Department::find($id);
+            $dept = User::find($id);
+            // print_r($dept);exit;
             $dept->delete();
-            return redirect('/admin/department')->with('success', 'Deleted successfully');
+            return redirect('/admin/users')->with('success', 'Deleted successfully');
         }
 
         public function paymentlist()
         {
             $result = \DB::table('payments')
             ->leftJoin('categories', 'categories.id' , '=',  'payments.premium_id')
-            ->select('categories.id as pre_id','categories.primeum','payments.*')
+            ->leftJoin('users', 'users.id' , '=',  'payments.userid')
+            ->select('categories.id as pre_id','categories.primeum','payments.*','users.name')
             ->paginate(10);
 
     // echo "<pre>";print_r($result);exit;

@@ -100,6 +100,43 @@
                     @endif
 
     </div> <!-- form-group// -->
+
+    
+
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+    </div>
+    
+      <input type="text" class="form-control{{ $errors->has('plan') ? ' is-invalid' : '' }}" name="plan" value="{{ $category->primeum }}" readonly />
+
+      @if ($errors->has('plan'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('plan') }}</strong>
+                                    </span>
+                    @endif
+
+    </div> <!-- form-group// -->
+
+        <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+    </div>
+    
+      <input type="text" class="form-control{{ $errors->has('amt') ? ' is-invalid' : '' }}" name="amt" value="{{ $category->amt }}" readonly />
+
+      <input type="hidden" name="preid" value="{{ $category->id }}" />
+
+      @if ($errors->has('amt'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('amt') }}</strong>
+                                    </span>
+                    @endif
+
+    </div> <!-- form-group// -->
+
+
+
     
     <div class="form-group input-group">
       <div class="input-group-prepend">

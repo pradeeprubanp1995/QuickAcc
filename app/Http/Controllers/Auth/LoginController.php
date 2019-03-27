@@ -65,7 +65,7 @@ class LoginController extends Controller
             //     return redirect()->route('userlogin')->withErrors('Please select any PREMIUM','errors');
             // }
         // print_r($_POST);exit();
-        // Session::put('password', $request['password']);
+        Session::put('password', $request['password']);
 
         $credentials = $request->only('email', 'password');
 
@@ -111,15 +111,15 @@ class LoginController extends Controller
     }
         public function logout(Request $request)
         {
-            $usertype = Auth::user()->user_type;
+            // $usertype = Auth::user()->user_type;
             // echo $usertype;exit;
             $this->guard()->logout();
 
             $request->session()->invalidate();
             
-            if($usertype == 1)
-            return $this->loggedOut($request) ?: redirect('/admin/login');
-            else
+            // if($usertype == 1)
+            // return $this->loggedOut($request) ?: redirect('/admin/login');
+            // else
             return $this->loggedOut($request) ?: redirect('/userlogin');
         }
 

@@ -45,7 +45,7 @@ Route::any('/getamount','WeekpointsController@getamount')->name('getamount');
 
 
 // Registration
-Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('userregister');
+Route::get('/register/{id}', 'Auth\RegisterController@showRegistrationForm')->name('userregister');
 Route::post('/register', 'Auth\RegisterController@register');
 Route::any('/register/response','Auth\RegisterController@register')->name('register.request');
 

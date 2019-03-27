@@ -289,6 +289,8 @@ class Usercontroller extends Controller
             'password' => 'min:5|required_with:confirmpassword|same:confirmpassword',
             'confirmpassword' => 'required|min:5',
         ]);
+
+
         
         if($request['oldpassword']==Session::get('password'))
         {
@@ -300,7 +302,7 @@ class Usercontroller extends Controller
          Session::flush();      
         // $request->session()->invalidate();
         // $request->session()->flash('errors', 'You are logged out!');
-        return redirect('/login');}
+        return redirect('/userlogin');}
         else{
         return redirect()->back()->with('danger', 'Please Give correct oldpassword');}      
     }

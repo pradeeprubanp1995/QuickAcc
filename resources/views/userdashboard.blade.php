@@ -50,7 +50,7 @@ section#why .row .col-lg-4 img {
                     <div id="logo">
                         <h4>
                             <a href="#">
-                                <img src="{{asset('uploads/face1.jpg')}}" width="50px" height="40px" style="border-radius: 100px;" />
+                                <!-- <img src="{{asset('uploads/face1.jpg')}}" width="50px" height="40px" style="border-radius: 100px;" /> -->
                                 <span class="logo-sp">Quick</span> Acc
                             </a>
                         </h4>
@@ -235,7 +235,7 @@ section#why .row .col-lg-4 img {
             <li > <b> 24*7 Support</b> </li>
             <li > <b> No private generator:access</b> </li>
             <li > <b> No daily private accounts</b> </li>
-            <li><a class="pricebutton" href="{{ url('/register') }}" target="_blank" rel="nofollow"><span class="icon-tag"></span> Check Out</a></li>
+            <li><a class="pricebutton" href="{{ url('/register/4') }}"  rel="nofollow"><span class="icon-tag"></span> Check Out</a></li>
         </ul>
     <ul class="theplan">
             <li class="title"><b>$15</b><br />One Year </li>
@@ -246,7 +246,7 @@ section#why .row .col-lg-4 img {
             <li > <b> No private generator:access</b> </li>
             <li > <b> 1 daily private accounts</b> </li>
             
-            <li><a class="pricebutton2" href="{{ url('/register') }}" target="_blank" rel="nofollow"><span class="icon-tag"></span> Check Out</a></li>
+            <li><a class="pricebutton2" href="{{ url('/register/3') }}" rel="nofollow"><span class="icon-tag"></span> Check Out</a></li>
         </ul>
      <ul class="theplan">
             <li class="title"><b>$30</b><br />One month </li>
@@ -256,7 +256,7 @@ section#why .row .col-lg-4 img {
             <li > <b> 24*7 Support</b> </li>
             <li > <b>  private generator:access</b> </li>
             <li > <b> 4 daily private accounts</b> </li>
-            <li><a class="pricebutton3" href="{{ url('/register') }}" target="_blank" rel="nofollow"><span class="icon-tag"></span> Check Out</a></li>
+            <li><a class="pricebutton3" href="{{ url('/register/5') }}" rel="nofollow"><span class="icon-tag"></span> Check Out</a></li>
         </ul>
 </div>
 
