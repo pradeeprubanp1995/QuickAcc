@@ -52,9 +52,6 @@
        
     </div>
 
-
-
-
 <!-- for accounts -->
 <!-- Main-wrapper -->
 <div class="main-wrapper">
